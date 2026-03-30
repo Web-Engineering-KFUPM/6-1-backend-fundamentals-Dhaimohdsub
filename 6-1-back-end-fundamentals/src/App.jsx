@@ -367,6 +367,13 @@ app.get('/student', (req, res) => {
     major: 'Computer Science'
   });
 });
+useEffect(() => {
+  fetch('http://localhost:3000/student')
+    .then((res) => res.json())
+    .then((data) => {
+      setStudent(data);
+    });
+}, []);
 app.use(cors());
 import { useEffect, useState } from 'react';
 import './index.css';
