@@ -361,6 +361,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.send('This is the about route');
 });
+app.get('/student', (req, res) => {
+  res.json({
+    name: 'Aisha',
+    major: 'Computer Science'
+  });
+});
 app.use(cors());
 import { useEffect, useState } from 'react';
 import './index.css';
