@@ -358,6 +358,9 @@ app.listen(3000, () => {
 app.get('/', (req, res) => {
   res.send('Hello from the back-end server');
 });
+app.get('/about', (req, res) => {
+  res.send('This is the about route');
+});
 app.use(cors());
 import { useEffect, useState } from 'react';
 import './index.css';
