@@ -374,6 +374,7 @@ useEffect(() => {
       setStudent(data);
     });
 }, []);
+const [student, setStudent] = useState(null);
 app.use(cors());
 import { useEffect, useState } from 'react';
 import './index.css';
