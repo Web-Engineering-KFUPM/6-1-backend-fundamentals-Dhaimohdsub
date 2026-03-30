@@ -88,9 +88,7 @@ Then complete the TODOs there.
 TODO 1:
 Import Express
 -------------------------------------------------------------------
-
 In server.js, import Express.
-
 Hint:
 - use the import keyword
 - import from 'express'
@@ -351,7 +349,16 @@ After you finish, answer these questions:
 END OF LAB INSTRUCTIONS
 ===================================================================
 */
-
+import express from 'express';
+const app = express();
+import cors from 'cors';
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
+});
+app.get('/', (req, res) => {
+  res.send('Hello from the back-end server');
+});
+app.use(cors());
 import { useEffect, useState } from 'react';
 import './index.css';
 
